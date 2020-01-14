@@ -2,17 +2,22 @@
 
 namespace App;
 
+use App\Dog;
 use App\Notifications\VerifyEmail;
 use App\Notifications\ResetPassword;
 use Tymon\JWTAuth\Contracts\JWTSubject;
-use Illuminate\Notifications\Notifiable;
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable implements JWTSubject //, MustVerifyEmail
 {
     use Notifiable;
 
+    public function dogs()
+    {
+        return $this->hasMany(Dog::class, 'user_id');
+    }
     /**
      * The attributes that are mass assignable.
      *
