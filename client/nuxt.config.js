@@ -38,6 +38,7 @@ module.exports = {
     ],
 
     plugins: [
+        // '~bootstrap-vue/nuxt',
         '~components/global',
         '~plugins/i18n',
         '~plugins/vform',
@@ -46,10 +47,11 @@ module.exports = {
         '~plugins/nuxt-client-init', // Comment this for SSR
         { src: '~plugins/bootstrap', mode: 'client' }
     ],
-
+    // modules: ['bootstrap-vue/nuxt'],
     modules: [
         '@nuxtjs/router',
-        'bootstrap-vue/nuxt'
+        'bootstrap-vue/nuxt',
+        '@nuxtjs/bootstrap-vue'
     ],
     bootstrapVue: {
         icons: true, // Install the IconsPlugin (in addition to BootStrapVue plugin,

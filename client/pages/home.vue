@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="overflow-auto">
     <div>
       <AddPet @dogSaved="OnSubmited" />
     </div>
@@ -15,6 +15,7 @@
 import AddPet from "./../components/AddPet";
 import ShowDogs from "./../components/Showpet";
 import axios from "axios";
+
 export default {
   middleware: "auth",
 
@@ -66,3 +67,9 @@ export default {
   }
 };
 </script>
+
+<style>
+body{
+  background-color:DodgerBlue;
+}
+</style>
