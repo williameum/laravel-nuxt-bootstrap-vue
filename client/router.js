@@ -20,6 +20,7 @@ const routes = [
 
     { path: '/home', name: 'home', component: page('home.vue') },
     { path: '/home2', name: 'home2', component: page('home2.vue') },
+    { path: '/about', name: 'home2', component: page('about.vue') },
     {
         path: '/settings',
         component: page('settings/index.vue'),
